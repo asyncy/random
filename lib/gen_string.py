@@ -1,6 +1,6 @@
-import random
-import string
+from string import ascii_letters, digits
+from random import randint, SystemRandom
 
 
-def gen_string(length):
-    return ''.join(random.SystemRandom().choice(string.ascii_letters + string.digits) for _ in range(int(length)))
+def gen_string(lo, hi):
+    return ''.join(SystemRandom().choice(ascii_letters + digits) for _ in range(randint(int(lo), int(hi))))
