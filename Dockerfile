@@ -1,4 +1,4 @@
-FROM python:alpine
-COPY app.py /app.py
+FROM node:alpine
+COPY cli.js /cli.js
 COPY lib /lib
-ENTRYPOINT ["python", "app.py"]
+ENTRYPOINT ["node", "cli.js"]

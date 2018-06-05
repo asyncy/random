@@ -1,0 +1,48 @@
+commands:
+  boolean:
+    help: Generates a random boolean
+  string:
+    help: Generates a random string
+    arguments:
+      length:
+        type: int
+        required: true
+        help: Length of string
+  integer:
+    help: Generates a random integer
+    arguments:
+      low:
+        type: int
+        required: true
+        help: Lowest possible integer value
+      high:
+        type: int
+        required: true
+        help: Highest possible integer value
+  list:
+    help: Generates a random list of given type
+    arguments:
+      type:
+        type: string
+        enum:
+          - boolean
+          - string
+          - integer
+        required: true
+        help: The type of list you want to generate
+      length:
+        type: int
+        required: true
+        help: The length of the list
+      string_length:
+        type: int
+        default: 10
+        help: Length of the strings in the list (used if type is string)
+      integer_low:
+        type: int
+        default: 0
+        help: Lowest possible integer value in the list (used if type is integer)
+      integer_high:
+        type: int
+        default: 100
+        help: Highest possible integer value in the list (used if type is integer)
