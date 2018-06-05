@@ -1,10 +1,10 @@
-# Random generation for Asyncy.
+# Random generation as a microservice
 
-```coffee
+```sh
 # usage.story
-random_string = random string length:5
+microservice.guide exec random string --length=5
 
-random_int = random integer low:0 high:100
+microservice.guide exec random integer --low=0 --high=100
 
-random_string_list = random list type:string length:50 string_length:4
+microservice.guide exec random list --type=string --length=50 --string_length=4
 ```
