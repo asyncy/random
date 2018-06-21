@@ -1,8 +1,12 @@
 commands:
   boolean:
     help: Generates a random boolean
+    output:
+      type: boolean
   string:
     help: Generates a random string
+    output:
+      type: string
     arguments:
       length:
         type: int
@@ -10,6 +14,9 @@ commands:
         help: Length of string
   integer:
     help: Generates a random integer
+    output:
+      type:
+        int
     arguments:
       low:
         type: int
@@ -21,6 +28,8 @@ commands:
         help: Highest possible integer value
   list:
     help: Generates a random list of given type
+    output:
+      type: list
     arguments:
       type:
         type: string

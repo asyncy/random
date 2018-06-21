@@ -1,9 +1,9 @@
 # Random generation as a microservice
 
 ```sh
-microservice.guide exec random string --length=5
+omg exec string length:5
 
-microservice.guide exec random integer --low=0 --high=100
+omg exec integer low:0 high:100
 
-microservice.guide exec random list --type=string --length=50 --string_length=4
+omg exec list type:string length:50 string_length:4
 ```
