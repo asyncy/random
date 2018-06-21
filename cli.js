@@ -17,6 +17,6 @@ switch (process.argv[2]) {
     break;
   case 'list':
     args = JSON.parse(process.argv[3]);
-    console.log(list(args.type, args.length, args.string_length, args.integer_low, args.integer_high));
+    console.log(JSON.stringify(list(args.type, args.length, args.string_length, args.integer_low, args.integer_high)));
     break;
 }
