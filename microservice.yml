@@ -2,10 +2,14 @@ omg: 1
 actions:
   boolean:
     help: Generates a random boolean
+    format:
+      command: ['node', 'cli.js', 'boolean']
     output:
       type: boolean
   string:
     help: Generates a random string
+    format:
+      command: ['node', 'cli.js', 'string']
     output:
       type: string
     arguments:
@@ -15,6 +19,8 @@ actions:
         help: Length of string
   integer:
     help: Generates a random integer
+    format:
+      command: ['node', 'cli.js', 'integer']
     output:
       type:
         int
@@ -29,6 +35,8 @@ actions:
         help: Highest possible integer value
   list:
     help: Generates a random list of given type
+    format:
+      command: ['node', 'cli.js', 'list']
     output:
       type: list
     arguments:
