@@ -1,4 +1,8 @@
 omg: 1
+info:
+  version: 1.0.0
+  title: Random
+  description: This is a random service
 actions:
   boolean:
     help: Generates a random boolean
@@ -52,15 +56,15 @@ actions:
         type: int
         required: true
         help: The length of the list
-      string_length:
+      stringLength:
         type: int
         default: 10
         help: Length of the strings in the list (used if type is string)
-      integer_low:
+      integerLow:
         type: int
         default: 0
         help: Lowest possible integer value in the list (used if type is integer)
-      integer_high:
+      integerHigh:
         type: int
         default: 100
         help: Highest possible integer value in the list (used if type is integer)
