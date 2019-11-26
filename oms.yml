@@ -1,4 +1,4 @@
-omg: 1
+oms: 1
 info:
   version: 1.0.0
   title: Random
@@ -6,65 +6,87 @@ info:
 actions:
   boolean:
     help: Generates a random boolean
-    format:
-      command: ['node', 'cli.js', 'boolean']
+    http:
+      path: /boolean
+      method: get
+      port: 8080
     output:
-      type: boolean
+      contentType: application/json
+      type: map
   string:
     help: Generates a random string
-    format:
-      command: ['node', 'cli.js', 'string']
+    http:
+      path: /string
+      method: get
+      port: 8080
     output:
-      type: string
+      contentType: application/json
+      type: map
     arguments:
       length:
         type: int
-        required: true
+        in: query
+        required: false
+        default: 10
         help: Length of string
   integer:
     help: Generates a random integer
-    format:
-      command: ['node', 'cli.js', 'integer']
+    http:
+      path: /integer
+      method: get
+      port: 8080
     output:
-      type:
-        int
+      contentType: application/json
+      type: map
     arguments:
       low:
         type: int
+        in: query
         required: true
+        default: 1
         help: Lowest possible integer value
       high:
         type: int
+        in: query
         required: true
+        default: 10
         help: Highest possible integer value
   list:
     help: Generates a random list of given type
-    format:
-      command: ['node', 'cli.js', 'list']
+    http:
+      path: /list
+      method: get
+      port: 8080
     output:
-      type: list
+      contentType: application/json
+      type: map
     arguments:
       type:
-        type: string
+        type: enum
+        in: query
         enum:
           - boolean
           - string
           - integer
         required: true
         help: The type of list you want to generate
-      length:
+      listLength:
         type: int
+        in: query
         required: true
         help: The length of the list
       stringLength:
         type: int
+        in: query
         default: 10
         help: Length of the strings in the list (used if type is string)
       integerLow:
         type: int
-        default: 0
+        in: query
+        default: 1
         help: Lowest possible integer value in the list (used if type is integer)
       integerHigh:
         type: int
+        in: query
         default: 100
         help: Highest possible integer value in the list (used if type is integer)
