@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - '12'
+services:
+  - docker
+before_install:
+  - npm i @microservices/cli
+script:
+  - npx oms build
+  - |
+    output="$(npx oms run --silent integer -a low=50 -a high=50 | jq -c .)"
+    if [ "$output" != '{"result":50}' ] ; then echo "$output"; exit 1; fi
