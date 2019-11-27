@@ -3,6 +3,10 @@ info:
   version: 1.0.0
   title: Random
   description: This is a random service
+  contact:
+    name: Open Microservices
+    url: 'https://openmicroservices.org'
+    email: core@openmicroservices.org
 actions:
   boolean:
     help: Generates a random boolean
